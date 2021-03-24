@@ -43,7 +43,7 @@ const store = new Vuex.Store({
 
 		singleProduct({ commit }, { id }) {
 			
-			axios.get('/hotel/shop/shop/api/single/product/' + id)
+			axios.get('/single/product/' + id)
 				.then((res) => {
 			
 					

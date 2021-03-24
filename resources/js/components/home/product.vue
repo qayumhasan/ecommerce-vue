@@ -68,7 +68,7 @@
       methods:{
          getProduct(page = 1){
 
-               axios.get('api/products?page=' + page)
+               axios.get('/products?page=' + page)
                   .then(response => {
                      
                      this.products = response.data;

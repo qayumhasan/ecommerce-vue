@@ -2163,7 +2163,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios.get('api/products?page=' + page).then(function (response) {
+      axios.get('/products?page=' + page).then(function (response) {
         _this.products = response.data;
         console.log(response.data);
       });
@@ -57802,6 +57802,7 @@ try {
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = document.head.querySelector('meta[name="api-base-url"]').content;
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -58662,7 +58663,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
     singleProduct: function singleProduct(_ref3, _ref4) {
       var commit = _ref3.commit;
       var id = _ref4.id;
-      axios.get('/hotel/shop/shop/api/single/product/' + id).then(function (res) {
+      axios.get('/single/product/' + id).then(function (res) {
         commit('SINGLE_PRODUCT', res.data.data);
       });
     },

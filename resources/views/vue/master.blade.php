@@ -10,6 +10,7 @@
    <meta name="keywords" content="{{$seo->meta_key}}">
    <meta name="description" content="{{$seo->meta_description}}">
    <meta name="csrf-token" content="{{ csrf_token() }}">
+   <meta name="api-base-url" content="{{ url('api/') }}" />
    @yield('meta')
    <!-- Favicon Icon -->
     <link rel="icon" href="{{$logos->favicon}}" type="image/gif" sizes="16x16">
@@ -38,7 +39,7 @@
 
 <body>
    <div id="app">
-      
+   
 
 <masterarea></masterarea>
  
