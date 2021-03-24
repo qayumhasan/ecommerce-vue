@@ -1,0 +1,2 @@
+[05-Dec-2020 11:19:16 UTC] PHP Fatal error:  Cannot use Illuminate\Foundation\Auth\SendsPasswordResetEmails as SendsPasswordResetEmails because the name is already in use in /home2/kinenins/public_html/app/Http/Controllers/Auth/AdminForgotPasswordController.php on line 16
+[05-Dec-2020 11:36:22 UTC] PHP Fatal error:  Cannot use Illuminate\Support\Facades\Password as Password because the name is already in use in /home2/kinenins/public_html/app/Http/Controllers/Auth/AdminForgotPasswordController.php on line 12

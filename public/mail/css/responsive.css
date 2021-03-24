@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+@media (max-width: 575.98px) {
+   
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .banner_portfolio span {
+    color: #ffff;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.banner_portfolio h3 {
+    color: #ffff;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.banner_portfolio p {
+    color: #ffff;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.banner_portfolio {
+    
+    top: 300px;
+   
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+   
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+}
+
+
+@media (min-width: 1200px) {
+    
+}

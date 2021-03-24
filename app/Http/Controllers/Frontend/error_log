@@ -1,0 +1,48 @@
+[28-Nov-2020 18:17:04 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[29-Nov-2020 08:02:52 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php on line 13
+[29-Nov-2020 22:01:53 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[30-Nov-2020 10:52:28 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php on line 13
+[01-Dec-2020 01:10:38 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[01-Dec-2020 14:53:22 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php on line 13
+[02-Dec-2020 04:32:33 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[02-Dec-2020 18:10:25 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php:13
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/ContractUsController.php on line 13
+[03-Dec-2020 07:56:36 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[04-Dec-2020 10:46:28 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[05-Dec-2020 12:56:15 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
+[06-Dec-2020 15:35:57 UTC] PHP Fatal error:  Uncaught Error: Class 'App\Http\Controllers\Controller' not found in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php:40
+Stack trace:
+#0 {main}
+  thrown in /home2/kinenins/public_html/app/Http/Controllers/Frontend/FrontendController.php on line 40
