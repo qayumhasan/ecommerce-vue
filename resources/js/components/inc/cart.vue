@@ -2,7 +2,7 @@
   <div class="cart-sidebar">
     <div class="cart-sidebar-header">
       <h5>
-        My Cart <span class="text-success">(5 item)</span>
+        My Cart <span class="text-success">({{cartItemCount}} item)</span>
         <a data-toggle="offcanvas" class="float-right" href="#"
           ><i class="mdi mdi-close"></i>
         </a>
@@ -79,6 +79,9 @@ export default {
     cartTotalPrice() {
       return this.$store.getters.cartTotalPrice;
     },
+    cartItemCount(){
+      return this.$store.getters.cartItemCount;
+    }
   },
   methods:{
     removeproduct(product){

@@ -163,7 +163,6 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         smasif\ShurjopayLaravelPackage\ShurjopayServiceProvider::class,
-        'Netshell\Paypal\PaypalServiceProvider',
 
 
 
@@ -183,6 +182,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Jenssegers\Agent\AgentServiceProvider::class,
+        Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         
 
     ],
@@ -246,7 +246,6 @@ return [
         'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
         'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
         'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
-        'Paypal' => 'Netshell\Paypal\Facades\Paypal',
 
     ],
 

@@ -72,7 +72,6 @@
                   .then(response => {
                      
                      this.products = response.data;
-                     console.log(response.data);
                   });
             
          },

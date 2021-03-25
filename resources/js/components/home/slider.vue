@@ -1,18 +1,10 @@
 <template>
   <div class="col-lg-9">
-  
     <div class="carousel-slider-main text-center">
       <div
         class="owl-carousel owl-carousel-slider rounded overflow-hidden shadow-sm"
       >
-
-
-
-
-
-
-        <div class="item" v-for="(item,index) in banners">
-          
+        <div class="item">
           <a href="shop.html"
             ><img
               class="img-fluid"
@@ -20,7 +12,6 @@
               alt="First slide"
           /></a>
         </div>
-       
 
 
       </div>
@@ -31,45 +22,46 @@
 <script>
 export default {
   name: "slider",
-  data(){
-    return{
-      banners :[],
-    }
+  data() {
+    return {
+      banners: [],
+    };
   },
   mounted() {
+    axios.get("/banners").then((res) => {
+      console.log(res.data);
+      this.banners = res.data;
+    });
 
-   axios.get('/hotel/shop/shop/api/banners')
-			.then((res) => {
-				this.banners = res.data;
-			});
-
-
-    var mainslider = $(".owl-carousel-slider");
-    if (mainslider.length > 0) {
-      mainslider.owlCarousel({
-        items: 1,
-        dots: false,
-        lazyLoad: true,
-        pagination: true,
-        autoPlay: 4000,
-        loop: true,
-        singleItem: true,
-        navigation: true,
-        stopOnHover: true,
-        nav: true,
-        navigationText: [
-          "<i class='mdi mdi-chevron-left'></i>",
-          "<i class='mdi mdi-chevron-right'></i>",
-        ],
-      });
-    }
- 
-     
+    this.$nextTick(() => {
+      var mainslider = $(".owl-carousel-slider");
+      if (mainslider.length > 0) {
+        mainslider.owlCarousel({
+          items: 1,
+          dots: false,
+          lazyLoad: true,
+          pagination: true,
+          autoPlay: 4000,
+          loop: true,
+          singleItem: true,
+          navigation: true,
+          stopOnHover: true,
+          nav: true,
+          navigationText: [
+            "<i class='mdi mdi-chevron-left'></i>",
+            "<i class='mdi mdi-chevron-right'></i>",
+          ],
+        });
+      }
+    });
   },
-  computed:{
-    getBanners(){
+  computed: {
+    getBanners() {
       return this.$store.getters.getBanner;
-    }
-  }
+    },
+    isbanner() {
+      return this.banners.length > 0;
+    },
+  },
 };
 </script>

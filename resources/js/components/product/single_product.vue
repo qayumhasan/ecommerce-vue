@@ -27,7 +27,7 @@
 
                         </div>
                         <div id="sync2" class="owl-carousel">
-
+                           
                            <div class="item" v-for="(item,index) in getSingleProduct.image" :key="index">
                               <img alt="" :src="'storage/app/public/'+item" class="img-fluid img-center">
                            </div>

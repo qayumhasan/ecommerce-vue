@@ -2165,7 +2165,6 @@ __webpack_require__.r(__webpack_exports__);
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       axios.get('/products?page=' + page).then(function (response) {
         _this.products = response.data;
-        console.log(response.data);
       });
     },
     addtocart: function addtocart(product) {
@@ -2209,15 +2208,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "slider",
   data: function data() {
@@ -2228,30 +2218,36 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios.get('/hotel/shop/shop/api/banners').then(function (res) {
+    axios.get("/banners").then(function (res) {
+      console.log(res.data);
       _this.banners = res.data;
     });
-    var mainslider = $(".owl-carousel-slider");
+    this.$nextTick(function () {
+      var mainslider = $(".owl-carousel-slider");
 
-    if (mainslider.length > 0) {
-      mainslider.owlCarousel({
-        items: 1,
-        dots: false,
-        lazyLoad: true,
-        pagination: true,
-        autoPlay: 4000,
-        loop: true,
-        singleItem: true,
-        navigation: true,
-        stopOnHover: true,
-        nav: true,
-        navigationText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"]
-      });
-    }
+      if (mainslider.length > 0) {
+        mainslider.owlCarousel({
+          items: 1,
+          dots: false,
+          lazyLoad: true,
+          pagination: true,
+          autoPlay: 4000,
+          loop: true,
+          singleItem: true,
+          navigation: true,
+          stopOnHover: true,
+          nav: true,
+          navigationText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"]
+        });
+      }
+    });
   },
   computed: {
     getBanners: function getBanners() {
       return this.$store.getters.getBanner;
+    },
+    isbanner: function isbanner() {
+      return this.banners.length > 0;
     }
   }
 });
@@ -2345,6 +2341,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     cartTotalPrice: function cartTotalPrice() {
       return this.$store.getters.cartTotalPrice;
+    },
+    cartItemCount: function cartItemCount() {
+      return this.$store.getters.cartItemCount;
     }
   },
   methods: {
@@ -39916,35 +39915,36 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-lg-9" }, [
-    _c("div", { staticClass: "carousel-slider-main text-center" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "owl-carousel owl-carousel-slider rounded overflow-hidden shadow-sm"
-        },
-        _vm._l(_vm.banners, function(item, index) {
-          return _c("div", { staticClass: "item" }, [_vm._m(0, true)])
-        }),
-        0
-      )
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "shop.html" } }, [
-      _c("img", {
-        staticClass: "img-fluid",
-        attrs: {
-          src: "public/uploads/banner/th_1610027249.jpg",
-          alt: "First slide"
-        }
-      })
+    return _c("div", { staticClass: "col-lg-9" }, [
+      _c("div", { staticClass: "carousel-slider-main text-center" }, [
+        _c(
+          "div",
+          {
+            staticClass:
+              "owl-carousel owl-carousel-slider rounded overflow-hidden shadow-sm"
+          },
+          [
+            _c("div", { staticClass: "item" }, [
+              _c("a", { attrs: { href: "shop.html" } }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: {
+                    src: "public/uploads/banner/th_1610027249.jpg",
+                    alt: "First slide"
+                  }
+                })
+              ])
+            ])
+          ]
+        )
+      ])
     ])
   }
 ]
@@ -39970,7 +39970,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "cart-sidebar" }, [
-    _vm._m(0),
+    _c("div", { staticClass: "cart-sidebar-header" }, [
+      _c("h5", [
+        _vm._v("\n      My Cart "),
+        _c("span", { staticClass: "text-success" }, [
+          _vm._v("(" + _vm._s(_vm.cartItemCount) + " item)")
+        ]),
+        _vm._v(" "),
+        _vm._m(0)
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -40071,21 +40080,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cart-sidebar-header" }, [
-      _c("h5", [
-        _vm._v("\n      My Cart "),
-        _c("span", { staticClass: "text-success" }, [_vm._v("(5 item)")]),
-        _vm._v(" "),
-        _c(
-          "a",
-          {
-            staticClass: "float-right",
-            attrs: { "data-toggle": "offcanvas", href: "#" }
-          },
-          [_c("i", { staticClass: "mdi mdi-close" })]
-        )
-      ])
-    ])
+    return _c(
+      "a",
+      {
+        staticClass: "float-right",
+        attrs: { "data-toggle": "offcanvas", href: "#" }
+      },
+      [_c("i", { staticClass: "mdi mdi-close" })]
+    )
   },
   function() {
     var _vm = this
@@ -58712,7 +58714,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\hotel\shop\shop\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\hotel\shop\shop-main\resources\js\app.js */"./resources/js/app.js");
 
 
 /***/ })
